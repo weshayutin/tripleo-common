@@ -624,14 +624,6 @@ container_images_template:
   services:
   - OS::TripleO::Services::NovaScheduler
 
-- imagename: "{{namespace}}/{{name_prefix}}nova-serialproxy{{name_suffix}}:{{tag}}"
-  image_source: kolla
-  params:
-  - ContainerNovaSerialproxyConfigImage
-  - ContainerNovaSerialproxyImage
-  services:
-  - OS::TripleO::Services::NovaSerialproxy
-
 - imagename: "{{namespace}}/{{name_prefix}}novajoin-notifier{{name_suffix}}:{{tag}}"
   image_source: kolla
   params:
@@ -771,22 +763,6 @@ container_images_template:
   services:
   - OS::TripleO::Services::Redis
   - OS::TripleO::Services::UndercloudRedis
-
-- imagename: "{{namespace}}/{{name_prefix}}sahara-api{{name_suffix}}:{{tag}}"
-  image_source: kolla
-  params:
-  - ContainerSaharaApiImage
-  - ContainerSaharaConfigImage
-  services:
-  - OS::TripleO::Services::SaharaApi
-  - OS::TripleO::Services::SaharaEngine
-
-- imagename: "{{namespace}}/{{name_prefix}}sahara-engine{{name_suffix}}:{{tag}}"
-  image_source: kolla
-  params:
-  - ContainerSaharaEngineImage
-  services:
-  - OS::TripleO::Services::SaharaEngine
 
 {% if not rhel_containers %}
 - imagename: "{{namespace}}/{{name_prefix}}sensu-client{{name_suffix}}:{{tag}}"
