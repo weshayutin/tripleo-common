@@ -144,8 +144,6 @@ container_images:
 - image_source: tripleo
   imagename: docker.io/tripleotrain/centos-binary-nova-scheduler:current-tripleo
 - image_source: kolla
-  imagename: docker.io/tripleotrain/centos-binary-nova-serialproxy:current-tripleo
-- image_source: tripleo
   imagename: docker.io/tripleotrain/centos-binary-novajoin-notifier:current-tripleo
 - image_source: tripleo
   imagename: docker.io/tripleotrain/centos-binary-novajoin-server:current-tripleo
@@ -179,10 +177,6 @@ container_images:
   imagename: docker.io/tripleotrain/centos-binary-redis:current-tripleo
 - image_source: tripleo
   imagename: docker.io/tripleotrain/centos-binary-rsyslog:current-tripleo
-- image_source: kolla
-  imagename: docker.io/tripleotrain/centos-binary-sahara-api:current-tripleo
-- image_source: kolla
-  imagename: docker.io/tripleotrain/centos-binary-sahara-engine:current-tripleo
 - image_source: kolla
   imagename: docker.io/tripleotrain/centos-binary-sensu-client:current-tripleo
 - image_source: tripleo
